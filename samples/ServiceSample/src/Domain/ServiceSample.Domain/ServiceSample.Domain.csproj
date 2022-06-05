@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ServiceSample.Domain</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\src\ApplicationFramework.Domain\ApplicationFramework.Domain.csproj" />
+    <ProjectReference Include="..\..\..\ApplicationFramework\ApplicationFramework.Domain\ApplicationFramework.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
