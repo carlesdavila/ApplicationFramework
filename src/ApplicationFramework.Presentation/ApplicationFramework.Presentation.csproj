@@ -4,6 +4,18 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        
+        <PackageId>ApplicationFramework.Presentation</PackageId>
+        <Authors>Carles Davila</Authors>
+        <Description>ApplicationFramework for your Presentation layer.</Description>
+        <PackageProjectUrl>https://github.com/carlesdavila/ApplicationFramework</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/carlesdavila/ApplicationFramework</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+        <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+        <MinVerAutoIncrement>minor</MinVerAutoIncrement>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,4 +27,7 @@
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>

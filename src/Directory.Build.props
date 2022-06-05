@@ -1,0 +1,8 @@
+<Project>
+    <PropertyGroup>
+        <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="MinVer" Version="4.0.0" PrivateAssets="All" />
+    </ItemGroup>
+</Project>

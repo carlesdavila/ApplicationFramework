@@ -4,6 +4,21 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PackageId>ApplicationFramework.Domain</PackageId>
+        <Authors>Carles Davila</Authors>
+        <Description>ApplicationFramework for your Domain layer.</Description>
+        <PackageProjectUrl>https://github.com/carlesdavila/ApplicationFramework</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/carlesdavila/ApplicationFramework</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+        <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+        <MinVerAutoIncrement>minor</MinVerAutoIncrement>
     </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>

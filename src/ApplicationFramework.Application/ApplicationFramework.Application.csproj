@@ -4,6 +4,18 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PackageId>ApplicationFramework.Application</PackageId>
+        <Authors>Carles Davila</Authors>
+        <Description>ApplicationFramework for your Application layer.</Description>
+        <PackageProjectUrl>https://github.com/carlesdavila/ApplicationFramework</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/carlesdavila/ApplicationFramework</RepositoryUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+        <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
+        <MinVerAutoIncrement>minor</MinVerAutoIncrement>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,4 +24,7 @@
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>
