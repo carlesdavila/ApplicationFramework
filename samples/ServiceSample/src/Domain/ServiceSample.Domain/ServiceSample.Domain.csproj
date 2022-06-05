@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\src\ApplicationFramework.Domain\ApplicationFramework.Domain.csproj" />
-    <ProjectReference Include="..\..\..\ApplicationFramework\ApplicationFramework.Domain\ApplicationFramework.Domain.csproj" />
   </ItemGroup>
 
 </Project>
