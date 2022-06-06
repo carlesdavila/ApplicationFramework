@@ -13,6 +13,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <PackageIcon>logo.png</PackageIcon>
 
         <MinVerDefaultPreReleasePhase>preview</MinVerDefaultPreReleasePhase>
         <MinVerAutoIncrement>minor</MinVerAutoIncrement>
@@ -20,5 +21,6 @@
 
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />
+        <None Include="../../logo.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 </Project>
