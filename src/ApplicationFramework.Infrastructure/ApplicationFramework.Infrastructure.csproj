@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
-        <PackageId>ApplicationFramework.Infrastructure</PackageId>
+        <PackageId>AppFramework.Infrastructure</PackageId>
         <Authors>Carles Davila</Authors>
         <Description>ApplicationFramework for your Infrastructure layer.</Description>
         <PackageProjectUrl>https://github.com/carlesdavila/ApplicationFramework</PackageProjectUrl>

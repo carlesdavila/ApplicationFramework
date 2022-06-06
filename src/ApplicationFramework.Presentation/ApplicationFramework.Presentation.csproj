@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         
-        <PackageId>ApplicationFramework.Presentation</PackageId>
+        <PackageId>AppFramework.Presentation</PackageId>
         <Authors>Carles Davila</Authors>
         <Description>ApplicationFramework for your Presentation layer.</Description>
         <PackageProjectUrl>https://github.com/carlesdavila/ApplicationFramework</PackageProjectUrl>
@@ -19,10 +19,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ApplicationFramework.Application\ApplicationFramework.Application.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <PackageReference Include="AppFramework.Application" Version="1.0.0-preview.4" />
       <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.2" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     </ItemGroup>

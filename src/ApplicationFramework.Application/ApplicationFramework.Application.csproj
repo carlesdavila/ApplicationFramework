@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
-        <PackageId>ApplicationFramework.Application</PackageId>
+        <PackageId>AppFramework.Application</PackageId>
         <Authors>Carles Davila</Authors>
         <Description>ApplicationFramework for your Application layer.</Description>
         <PackageProjectUrl>https://github.com/carlesdavila/ApplicationFramework</PackageProjectUrl>
