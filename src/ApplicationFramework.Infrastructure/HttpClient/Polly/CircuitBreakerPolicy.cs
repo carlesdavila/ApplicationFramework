@@ -7,10 +7,10 @@ namespace ApplicationFramework.Infrastructure.HttpClient.Polly;
 
 public static class CircuitBreakerPolicy
 {
-    public static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy(IServiceProvider services)
+    public static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy(ILogger logger)
     {
-        var loggerFactory = services.GetService<ILoggerFactory>();
-        var logger = loggerFactory.CreateLogger("ApplicationFramework.CircuitBreakerPolicy");
+        // var loggerFactory = services.GetService<ILoggerFactory>();
+        // var logger = loggerFactory.CreateLogger("ApplicationFramework.CircuitBreakerPolicy");
 
         return HttpPolicyExtensions
             .HandleTransientHttpError()

@@ -6,11 +6,8 @@ namespace ApplicationFramework.Infrastructure.HttpClient.Polly;
 
 public static class TimeoutPolicy
 {
-    public static IAsyncPolicy<HttpResponseMessage> GetOptimisticTimeoutPolicy(IServiceProvider services, int timeout)
+    public static IAsyncPolicy<HttpResponseMessage> GetOptimisticTimeoutPolicy(ILogger logger, int timeout)
     {
-        var loggerFactory = services.GetService<ILoggerFactory>();
-        var logger = loggerFactory.CreateLogger("ApplicationFramework.TimeoutPolicy");
-
         return Policy.TimeoutAsync<HttpResponseMessage>(
             timeout,
             (context, timeSpan, task) =>

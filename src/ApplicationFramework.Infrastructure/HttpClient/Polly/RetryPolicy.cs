@@ -8,14 +8,11 @@ namespace ApplicationFramework.Infrastructure.HttpClient.Polly;
 
 public static class RetryPolicy
 {
-    public static IAsyncPolicy<HttpResponseMessage> GetPolicyWithJitterStrategy(IServiceProvider services, int retryCount)
+    public static IAsyncPolicy<HttpResponseMessage> GetPolicyWithJitterStrategy(ILogger logger, int retryCount)
     {
         //https://github.com/App-vNext/Polly/wiki/Retry-with-jitter
 
         var jitterer = new Random();
-
-        var loggerFactory = services.GetService<ILoggerFactory>();
-        var logger = loggerFactory.CreateLogger("ApplicationFramework.RetryPolicy");
 
         return HttpPolicyExtensions
             .HandleTransientHttpError()
