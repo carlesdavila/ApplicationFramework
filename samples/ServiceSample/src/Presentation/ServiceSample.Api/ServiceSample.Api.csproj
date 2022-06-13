@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AppFramework.Presentation" Version="1.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,8 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\src\ApplicationFramework.Presentation\ApplicationFramework.Presentation.csproj" />
-    <ProjectReference Include="..\..\..\ApplicationFramework\ApplicationFramework.Presentation\ApplicationFramework.Presentation.csproj" />
     <ProjectReference Include="..\..\Application\ServiceSample.Application\ServiceSample.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ServiceSample.Infrastructure\ServiceSample.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\ServiceSample.Persistence\ServiceSample.Persistence.csproj" />
