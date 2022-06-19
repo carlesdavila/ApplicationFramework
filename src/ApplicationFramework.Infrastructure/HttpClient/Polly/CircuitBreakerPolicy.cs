@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Polly;
 using Polly.Extensions.Http;
 
@@ -7,15 +6,12 @@ namespace ApplicationFramework.Infrastructure.HttpClient.Polly;
 
 public static class CircuitBreakerPolicy
 {
-    public static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy(ILogger logger)
+    public static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy(ILogger logger, int handledEventsAllowedBeforeBreaking = 5, int durationOfBreakInSeconds = 30)
     {
-        // var loggerFactory = services.GetService<ILoggerFactory>();
-        // var logger = loggerFactory.CreateLogger("ApplicationFramework.CircuitBreakerPolicy");
-
         return HttpPolicyExtensions
             .HandleTransientHttpError()
-            .CircuitBreakerAsync(5,
-                TimeSpan.FromSeconds(30),
+            .CircuitBreakerAsync(handledEventsAllowedBeforeBreaking,
+                TimeSpan.FromSeconds(durationOfBreakInSeconds),
                 (ex, span) =>
                 {
                     logger.LogWarning("Failed! Circuit open, waiting {0}", span);
@@ -23,6 +19,5 @@ public static class CircuitBreakerPolicy
                 },
                 () => logger.LogWarning("First execution after circuit break succeeded, circuit is reset.")
             );
-
     }
 }
