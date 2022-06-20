@@ -1,7 +1,6 @@
 ﻿using System.Net;
 using Polly;
 using Polly.Extensions.Http;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace ApplicationFramework.Infrastructure.HttpClient.Polly;
