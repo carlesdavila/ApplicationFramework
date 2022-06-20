@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ApplicationFramework.Infrastructure.HttpClient;
+using Microsoft.Extensions.DependencyInjection;
 using ServiceSample.Application.Interfaces;
 using ServiceSample.Infrastructure.Services;
 
@@ -8,7 +9,8 @@ internal static class HttpClientServicesExtensions
 {
     internal static IServiceCollection AddHttpClientServices(this IServiceCollection services)
     {
-        services.AddHttpClient<ILicenseService, LicenseService>();
+        services.AddHttpClient<ILicenseService, LicenseService>()
+            .AddResiliencePoliciesHandler();
 
         return services;
     }
