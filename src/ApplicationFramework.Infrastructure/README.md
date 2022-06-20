@@ -11,25 +11,31 @@ This package is part of the Service Application Framework that consists of the f
 
 ## HttpClient
 
-In your HttpClient Typed Client registration you can take advantage of `AddDefaultHandlers` extension that will include the following Delegating Handlers:
+In your HttpClient Typed Client registration you can take advantage of the following Polly policies:
 
-- `HttpClientProcessErrorDelegatingHandler`: This handler will process Error responses
-
-And the following Polly policies
-
-- `RetryPolicy.GetPolicyWithJitterStrategy(5)`
-- `CircuitBreakerPolicy.GetCircuitBreakerPolicy()`
+- TimeoutPolicy
+- CircuitBreakerPolicy
+- RetryPolicy
+- DefaultResilienceWrapPolicy: Policy Wrapper that wraps previous policies
 
 So in your services configuration
 
 ```c#
-// Register Delegating handlers that will be used in the HttpClientBuilder AddDefaultHandlers extension and also registers IHttpContextAccessor
-services.AddDefaultDelegatingHandlers();
-
-// Register ISomeService as Typed Client
+// Register ISomeService as Typed Client with DefaultResilienceWrapPolicy
 services.AddHttpClient<ISomeService, SomeService>()
-.AddDefaultHandlers()
+.AddResiliencePoliciesHandler()
 
+// Register ISomeService as Typed Client with TimeoutPolicy
+services.AddHttpClient<ISomeService, SomeService>()
+.AddTimeoutPolicyHandler()
+
+// Register ISomeService as Typed Client with CircuitBreakerPolicy
+services.AddHttpClient<ISomeService, SomeService>()
+.AddCircuitBreakerPolicyHandler()
+
+// Register ISomeService as Typed Client with RetryPolicy
+services.AddHttpClient<ISomeService, SomeService>()
+.AddRetryPolicyHandler()
 ```
 
 ## Data Encryption
